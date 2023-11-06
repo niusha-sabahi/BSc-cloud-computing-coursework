@@ -3,7 +3,7 @@ This repository contains my coursework for my Cloud Computing module, completed 
 
 The task was to create a program that, given some ebooks, can create a list of all anagrams of words which appear in all of the ebooks combined. Each anagram must consist of at least 2 words and be alphabetically ordered.
 
-This project was created on Google Cloud Platform (GCP), and so can only be run there. GCP Buckets, Cloud Functions and several Pub/Sub topics were utlised to create this program. The architecture of the program is as follows:
+This project was created on Google Cloud Platform (GCP), and so can only be run there. GCP Buckets, Cloud Functions and several Pub/Sub topics were utlised to create this program. A MapReduce architecture was used for this project and operated as follows:
 
 1. ebooks are stored in the input bucket.
 2. 'book_from_bucket_to_pubsub' function sends books from the input bucket to the 'bucket_to_mapper_topic' pub/sub.
